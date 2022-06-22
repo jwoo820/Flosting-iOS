@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57719A6738A7DF129EA49788 /* Pods_Flosting_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BF5E68F144D9EAA6ED15B1 /* Pods_Flosting_iOS.framework */; };
 		6AEE08172862CED000EBDBEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE08162862CED000EBDBEB /* AppDelegate.swift */; };
 		6AEE08192862CED000EBDBEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE08182862CED000EBDBEB /* SceneDelegate.swift */; };
 		6AEE081B2862CED000EBDBEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE081A2862CED000EBDBEB /* MainViewController.swift */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F22D213CFA77117060AB462 /* Pods-Flosting-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flosting-iOS.release.xcconfig"; path = "Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		32F3DBF99350F15E6BC0AED7 /* Pods-Flosting-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flosting-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		39BF5E68F144D9EAA6ED15B1 /* Pods_Flosting_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flosting_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEE08132862CED000EBDBEB /* Flosting-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flosting-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEE08162862CED000EBDBEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AEE08182862CED000EBDBEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57719A6738A7DF129EA49788 /* Pods_Flosting_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EFD8C418A450CF6784CA43D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32F3DBF99350F15E6BC0AED7 /* Pods-Flosting-iOS.debug.xcconfig */,
+				1F22D213CFA77117060AB462 /* Pods-Flosting-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6AEE080A2862CED000EBDBEB = {
 			isa = PBXGroup;
 			children = (
 				6AEE08152862CED000EBDBEB /* Flosting-iOS */,
 				6AEE08142862CED000EBDBEB /* Products */,
+				0EFD8C418A450CF6784CA43D /* Pods */,
+				BCC055B58A99742106418529 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = "Flosting-iOS";
 			sourceTree = "<group>";
 		};
+		BCC055B58A99742106418529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39BF5E68F144D9EAA6ED15B1 /* Pods_Flosting_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AEE08272862CED200EBDBEB /* Build configuration list for PBXNativeTarget "Flosting-iOS" */;
 			buildPhases = (
+				20B5E66D04889334B4117EFC /* [CP] Check Pods Manifest.lock */,
 				6AEE080F2862CED000EBDBEB /* Sources */,
 				6AEE08102862CED000EBDBEB /* Frameworks */,
 				6AEE08112862CED000EBDBEB /* Resources */,
+				A62F9AF4B3585AB398026C73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20B5E66D04889334B4117EFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flosting-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62F9AF4B3585AB398026C73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6AEE080F2862CED000EBDBEB /* Sources */ = {
@@ -270,6 +339,7 @@
 		};
 		6AEE08282862CED200EBDBEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32F3DBF99350F15E6BC0AED7 /* Pods-Flosting-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +367,7 @@
 		};
 		6AEE08292862CED200EBDBEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F22D213CFA77117060AB462 /* Pods-Flosting-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

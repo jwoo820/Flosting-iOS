@@ -6,5 +6,7 @@ target 'Flosting-iOS' do
   use_frameworks!
 
   # Pods for Flosting-iOS
-
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'Kingfisher', '~> 7.0'
+  
 end
