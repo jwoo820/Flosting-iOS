@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		57719A6738A7DF129EA49788 /* Pods_Flosting_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BF5E68F144D9EAA6ED15B1 /* Pods_Flosting_iOS.framework */; };
+		6AE1C46628681AAC0041177A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1C46528681AAC0041177A /* TabBarController.swift */; };
+		6AE1C46828681B390041177A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1C46728681B390041177A /* MyPageViewController.swift */; };
+		6AE1C46A28681B6E0041177A /* EventNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1C46928681B6E0041177A /* EventNoticeViewController.swift */; };
+		6AE1C46C28681D100041177A /* DesignBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE1C46B28681D100041177A /* DesignBoard.storyboard */; };
 		6AEE08172862CED000EBDBEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE08162862CED000EBDBEB /* AppDelegate.swift */; };
 		6AEE08192862CED000EBDBEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE08182862CED000EBDBEB /* SceneDelegate.swift */; };
-		6AEE081B2862CED000EBDBEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE081A2862CED000EBDBEB /* MainViewController.swift */; };
+		6AEE081B2862CED000EBDBEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE081A2862CED000EBDBEB /* HomeViewController.swift */; };
 		6AEE08202862CED200EBDBEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AEE081F2862CED200EBDBEB /* Assets.xcassets */; };
 		6AEE08232862CED200EBDBEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEE08212862CED200EBDBEB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,10 +23,14 @@
 		1F22D213CFA77117060AB462 /* Pods-Flosting-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flosting-iOS.release.xcconfig"; path = "Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		32F3DBF99350F15E6BC0AED7 /* Pods-Flosting-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flosting-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Flosting-iOS/Pods-Flosting-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		39BF5E68F144D9EAA6ED15B1 /* Pods_Flosting_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flosting_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE1C46528681AAC0041177A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6AE1C46728681B390041177A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		6AE1C46928681B6E0041177A /* EventNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNoticeViewController.swift; sourceTree = "<group>"; };
+		6AE1C46B28681D100041177A /* DesignBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DesignBoard.storyboard; sourceTree = "<group>"; };
 		6AEE08132862CED000EBDBEB /* Flosting-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flosting-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEE08162862CED000EBDBEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AEE08182862CED000EBDBEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6AEE081A2862CED000EBDBEB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6AEE081A2862CED000EBDBEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6AEE081F2862CED200EBDBEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AEE08222862CED200EBDBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AEE08242862CED200EBDBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,8 +54,18 @@
 				32F3DBF99350F15E6BC0AED7 /* Pods-Flosting-iOS.debug.xcconfig */,
 				1F22D213CFA77117060AB462 /* Pods-Flosting-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6AE1C46428681A940041177A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6AEE081A2862CED000EBDBEB /* HomeViewController.swift */,
+				6AE1C46528681AAC0041177A /* TabBarController.swift */,
+				6AE1C46728681B390041177A /* MyPageViewController.swift */,
+				6AE1C46928681B6E0041177A /* EventNoticeViewController.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		6AEE080A2862CED000EBDBEB = {
@@ -71,10 +89,11 @@
 		6AEE08152862CED000EBDBEB /* Flosting-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6AE1C46428681A940041177A /* Scene */,
 				6AEE08162862CED000EBDBEB /* AppDelegate.swift */,
 				6AEE08182862CED000EBDBEB /* SceneDelegate.swift */,
-				6AEE081A2862CED000EBDBEB /* MainViewController.swift */,
 				6AEE081F2862CED200EBDBEB /* Assets.xcassets */,
+				6AE1C46B28681D100041177A /* DesignBoard.storyboard */,
 				6AEE08212862CED200EBDBEB /* LaunchScreen.storyboard */,
 				6AEE08242862CED200EBDBEB /* Info.plist */,
 			);
@@ -150,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEE08232862CED200EBDBEB /* LaunchScreen.storyboard in Resources */,
+				6AE1C46C28681D100041177A /* DesignBoard.storyboard in Resources */,
 				6AEE08202862CED200EBDBEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AEE081B2862CED000EBDBEB /* MainViewController.swift in Sources */,
+				6AE1C46828681B390041177A /* MyPageViewController.swift in Sources */,
+				6AEE081B2862CED000EBDBEB /* HomeViewController.swift in Sources */,
+				6AE1C46628681AAC0041177A /* TabBarController.swift in Sources */,
+				6AE1C46A28681B6E0041177A /* EventNoticeViewController.swift in Sources */,
 				6AEE08172862CED000EBDBEB /* AppDelegate.swift in Sources */,
 				6AEE08192862CED000EBDBEB /* SceneDelegate.swift in Sources */,
 			);
