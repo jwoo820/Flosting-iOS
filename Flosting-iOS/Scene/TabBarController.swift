@@ -8,30 +8,42 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    private lazy var homeViewController: UIViewController = {
+        let viewController = UINavigationController(rootViewController: HomeViewController())
+        let tabBarItem = UITabBarItem(
+            title: "Home",
+            image: UIImage(systemName: "magazine"),
+            tag: 0
+        )
+        viewController.tabBarItem = tabBarItem
+        return viewController
+    }()
+    
+    private lazy var myPageViewController: UIViewController = {
+        let viewController = UINavigationController(rootViewController: MyPageViewContorller())
+        let tabBarItem = UITabBarItem(
+            title: "User",
+            image: UIImage(systemName: "person"),
+            tag: 1
+        )
+        viewController.tabBarItem = tabBarItem
+        return viewController
+    }()
+    
+    private lazy var eventNoticeViewController: UIViewController = {
+        let viewController = UINavigationController(rootViewController: EventNoticeViewController())
+        let tabBarItem = UITabBarItem(
+            title: "Event",
+            image: UIImage(systemName: "lightbulb"),
+            tag: 2
+        )
+        viewController.tabBarItem = tabBarItem
+        return viewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mainViewController = UINavigationController(rootViewController: HomeViewController())
-        mainViewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage(systemName: "magazine"),
-            selectedImage: UIImage(systemName: "magazine.fill")
-        )
-        
-        let myPageViewController = UINavigationController(rootViewController: MyPageViewContorller())
-        myPageViewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage(systemName: "person"),
-            selectedImage: UIImage(systemName: "person.fill")
-        )
-        
-        let eventNoticeViewController = UINavigationController(rootViewController: EventNoticeViewController())
-        eventNoticeViewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage(systemName: "lightbulb"),
-            selectedImage: UIImage(systemName: "lightbulb.fill")
-        )
-        
-        viewControllers = [mainViewController, eventNoticeViewController, myPageViewController]
+        viewControllers = [homeViewController, eventNoticeViewController, myPageViewController]
     }
 }

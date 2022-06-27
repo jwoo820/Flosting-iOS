@@ -60,12 +60,22 @@
 		6AE1C46428681A940041177A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				6AEE081A2862CED000EBDBEB /* HomeViewController.swift */,
+				6AEE08162862CED000EBDBEB /* AppDelegate.swift */,
+				6AEE08182862CED000EBDBEB /* SceneDelegate.swift */,
 				6AE1C46528681AAC0041177A /* TabBarController.swift */,
-				6AE1C46728681B390041177A /* MyPageViewController.swift */,
-				6AE1C46928681B6E0041177A /* EventNoticeViewController.swift */,
+				6AE1C46D286828790041177A /* TabBarItem */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		6AE1C46D286828790041177A /* TabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				6AE1C46928681B6E0041177A /* EventNoticeViewController.swift */,
+				6AE1C46728681B390041177A /* MyPageViewController.swift */,
+				6AEE081A2862CED000EBDBEB /* HomeViewController.swift */,
+			);
+			path = TabBarItem;
 			sourceTree = "<group>";
 		};
 		6AEE080A2862CED000EBDBEB = {
@@ -90,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				6AE1C46428681A940041177A /* Scene */,
-				6AEE08162862CED000EBDBEB /* AppDelegate.swift */,
-				6AEE08182862CED000EBDBEB /* SceneDelegate.swift */,
 				6AEE081F2862CED200EBDBEB /* Assets.xcassets */,
 				6AE1C46B28681D100041177A /* DesignBoard.storyboard */,
 				6AEE08212862CED200EBDBEB /* LaunchScreen.storyboard */,
