@@ -33,24 +33,68 @@ class HomeViewController: UIViewController {
         return button
     }()
     
-    private var startButton: UIButton = {
-        let button = UIButton()
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
+        collectionView.register(HomeViewMainCell.self, forCellWithReuseIdentifier: "HomeViewMainCell")
         
-        return button
+        return collectionView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationController()
         setupLayout()
     }
     
-    func setupLayout() {
+    
+
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeViewMainCell", for: indexPath) as? HomeViewMainCell
+        cell?.setup()
+
+        return cell ?? UICollectionViewCell()
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bounds = UIScreen.main.bounds
+        let height = bounds.size.height
+        let navHeight = self.topBarHeight
+        let tabHeight = TabBarController().tabBar.frame.size.height
+        return CGSize(width: collectionView.frame.width, height: height - navHeight - tabHeight)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected")
+    }
+}
+
+private extension HomeViewController {
+    func setupNavigationController() {
         title = "Home"
         
         navigationItem.rightBarButtonItem = rightButton
         navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    func setupLayout() {
+        view.addSubview(collectionView)
         
+        collectionView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
     }
 }
 
