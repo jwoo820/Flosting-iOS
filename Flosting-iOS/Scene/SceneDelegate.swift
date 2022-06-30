@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.backgroundColor = .systemBackground
         window?.makeKeyAndVisible()
         window?.tintColor = UIColor(red: (244/255), green: (210/255), blue: (210/255), alpha: 1)
+        
     }
 }
 
